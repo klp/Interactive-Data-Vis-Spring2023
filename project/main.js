@@ -490,10 +490,14 @@ function init() {
     node.selectAll('circle')
       // this seems dangerious, but it works!
       .style('fill', d => d.parent ? (circlePackColorScheme === 'region' ? regionBubbleColor(d.data.region) : divisionBubbleColor(d.data.division)) : 'white');
+    
+    createCircleLegend()
   }
 
   // listener for button
-  document.getElementById('toggle-color-scheme').addEventListener('click', toggleColorScheme);
+  document.getElementById('toggle-color-scheme').addEventListener('click', toggleColorScheme)
+
+  createCircleLegend()
   
   function regionBubbleColor(region) {
     const bubbleColorMap = {
@@ -566,6 +570,36 @@ function init() {
         .attr('r', d => d.r)
 
     })
+
+    function createCircleLegend() {
+      console.log('Creating circle legend...')
+    
+      d3.select('#circle-pack-legend-container').selectAll('*').remove() // remove previous legend content
+    
+      const circleLegendContainer = d3.select('#circle-pack-legend-container')
+    
+      const circleLegendData = circlePackColorScheme === 'region' 
+        ? Object.entries(regionBubbleColor)
+        : Object.entries(divisionBubbleColor)
+    
+      const circleLegend = circleLegendContainer.selectAll('div')
+        .data(circleLegendData)
+        .enter()
+        .append('div')
+        .attr('class', 'legend-item')
+    
+      circleLegend.append('span')
+        .attr('class', 'circle-legend-color')
+        .style('background-color', d => d[1])
+    
+      circleLegend.append('span')
+        .attr('class', 'circle-legend-label')
+        .text(d => d[0])
+    
+      console.log('Circle legend created.');
+    }    
+    
+    createCircleLegend()
 
   // draw()
 }

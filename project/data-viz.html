@@ -1,16 +1,16 @@
 <!DOCTYPE html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css'>
+    <link rel='stylesheet' href='style.css'>
     <title>Visualizing Utah's Population Growth</title>
-    <link rel="icon" type="image/x-icon" href="img/utah_icon.png">
+    <link rel='icon' type='image/x-icon' href='img/utah_icon.png'>
   </head>
   <body>
-    <div id="navbar"></div>
-    <div class="content">
+    <div id='navbar'></div>
+    <div class='content'>
       <h1>Visualizing Utah's Population Growth</h1>
       <p>
         The 2020 US Census Appointment Results(
@@ -21,13 +21,13 @@
         growth or shrinking of US states.
       </p>
       <h2>Something something overview</h2>
-      <!-- <div class="control">
-        <label class="radio">
-          <input type="radio" name="answer">
+      <!-- <div class='control'>
+        <label class='radio'>
+          <input type='radio' name='answer'>
           % change
         </label>
-        <label class="radio">
-          <input type="radio" name="answer">
+        <label class='radio'>
+          <input type='radio' name='answer'>
           Total change
         </label>
       </div> TODO remove--> 
@@ -39,19 +39,22 @@
         that might not be entirely accurate. 
       </p>
       <h2>Something something other states v. abroad</h2>
-      <div id="stacked-container"></div>
+      <div id='stacked-container'></div>
       <p>I have all sorts of smart opinions</p>
       <h2>Moving from Other US States to Utah</h2>
-      <div id="circle-pack-container"></div>
-      <button id="toggle-color-scheme">Toggle Color Scheme</button>
+      <div id="wrapper-container">
+        <div id='circle-pack-container'></div>
+        <div id='circle-pack-legend-container'></div>
+      </div>
+      <button id='toggle-color-scheme'>Toggle Color Scheme</button>
       <p>
         Data source: 
         <a href='https://www.kaggle.com/datasets/finnegannguyen/statetostate-migration-flows-from-2010-to-2019'>
         https://www.kaggle.com/datasets/finnegannguyen/statetostate-migration-flows-from-2010-to-2019
         </a>
       </p>
-      <script src="../lib/d3.js"></script>
-      <script src="main.js"></script>
+      <script src='../lib/d3.js'></script>
+      <script src='main.js'></script>
     </div>
   </body>
 </html>

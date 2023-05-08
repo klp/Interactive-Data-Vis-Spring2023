@@ -110,6 +110,27 @@ body {
     pointer-events: none;
 }
 
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+  
+.circle-legend-color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+  
+  .circle-legend-label {
+    font-size: 14px;
+}
+  
+#circle-pack-legend-container {
+    border: 1px solid black;
+}
+
 #navbar {
     color: maroon;
     max-width: 800px;
