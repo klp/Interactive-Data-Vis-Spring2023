@@ -66,15 +66,14 @@ let xScale
 let yScale
 let xScaleAbroadState
 let yScaleAboardState
-let xAxis // TODO remove
 let yAxis 
 let xAxisAbroadState
 let yAxisAbroadState
 
-let state = {
-  data: [],
-  selection: "all", // TODO: do I need a filter?
-}
+// let state = {
+//   data: [],
+//   selection: "all", // TODO: do I need a filter?
+// }
 
 const statesData = [
   { state: 'Utah', abbr: 'UT', percentChange: 18.4, popChange: 507731, changeCat: 'fastest' },
@@ -88,8 +87,6 @@ const statesData = [
   { state: 'West Virginia', abbr: 'WV', percentChange: -3.2, popChange: -68207, changeCat: 'shrinking' },
 
 ]
-
-console.log('states >> ', statesData) //diag
 
 // load data
 d3.csv('../data/migration_flows_from_2010_to_2019.csv', d => {
@@ -111,7 +108,6 @@ d3.csv('../data/migration_flows_from_2010_to_2019.csv', d => {
 })
   .then(raw_data => {
     state.data = raw_data
-    console.log('state data >>', state.data)  // diagnostic
     
     init()
   })
@@ -128,8 +124,7 @@ function init() {
   yScale = d3.scaleLinear()
     .domain([d3.min(statesData, d => d.percentChange) - 0.5, d3.max(statesData, d => d.percentChange) + 1])
     .range([height - margin.bottom, margin.top])
-  // create axes
-  // xAxis = d3.axisBottom(xScale) // TODO remove
+  // create axis
   yAxis = d3.axisLeft(yScale)
 
   // append svg
@@ -137,11 +132,6 @@ function init() {
     .append('svg')
     .attr('width', width)
     .attr('height', height)
-  // append axes
-  // TODO remove
-  // svg.append('g')
-  // .attr('transform', `translate(${margin.left}, ${height - margin.bottom})`)
-  // .call(xAxis)
   svg.append('g')
     .attr('transform', `translate(${margin.left}, 0)`)
     .call(yAxis)
@@ -152,15 +142,6 @@ function init() {
     .attr('text-anchor', 'middle')
     .attr('class', 'chart-title')
     .text('Fastest v. Slowest Growing/Shrinking States')
-  // append axis labels
-  // TODO remove
-  // svg.append('text')
-  //   .attr(
-  //     'transform', 
-  //     `translate(${width  / 2 + margin.right}, ${height - margin.bottom + 45})`)
-  //   .style('text-anchor', 'middle')
-  //   .attr('class', 'axis-label')
-  //   .text('State')
     
   svg.append('text')
     .attr('transform', 'rotate(-90)')
