@@ -6,22 +6,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>DATA73200 Interactive Data Visualization Spring 2023 </title>
+  <title>DATA73200 Interactive Data Visualization Spring 2023</title>
   <link rel="icon" type="image/x-icon" href="/img/utah_icon.png">
 </head>
 <body>
   <div id="navbar"></div>
   <div class="content">
-    <h1>DATA73200 Interactive Data Visualization</h1>
-    <h2>Revised tutorial</h2>
+    <h1>Revised Tutorial 3.2</h1>
     <p>
-      List of improvements after project
-      <ul>
-        <li>Fix the gap between x-axis and y-axis</li>
-        <li>Fixed ranges to avoid circles showing off the chart</li>
-        <li>Filtered out cases where the age was 'NA'</li>
-      </ul>
+      I decided to update a tutorial focusing on distributions, which 
+      demonstrates use of scatterplots, state and menus that update the data 
+      displayed on the graph.
     </p>
+    <div class='columns'>
+      <div class='column is-one-third'>
+        Brief
+      </div>
+      <div class='column'>
+      The scatterplot linked below shows the relationships between the age of the 
+      mother, the weight of the children born, and whether or not the mother 
+      smoked cigarettes. The dataset covers pregnancies between 1960 and 1967 
+      among women in the San Francisco East Bay area. 
+      I've used colors to differentiate between smokers and non-smokers, and a 
+      tooltip when hovering over each invidual circle to give details about the 
+      case/observation.
+      </div>
+    </div>
+    <div class='columns'>
+      <div class='column is-one-third'>
+        Methods/Skills
+      </div>
+      <div class='column'>
+        <ul>
+          <li>Scatterplot</li>
+          <li>Transitions</li>
+          <li>State management</li>
+          <li>Interactivity</li>
+        </ul>
+      </div>
+    </div>
+    <div class='columns'>
+      <div class='column is-one-third'>
+        Improvements after project
+      </div>
+      <div class='column'>
+        <ul>
+          <li>Fix the gap between x-axis and y-axis</li>
+          <li>Fixed ranges to avoid circles showing off the chart</li>
+          <li>Filtered out cases where the age was 'NA'</li>
+          <li>Added better highligting of a circle during hoverover</li>
+          <li>Added tooltip with case, weight, age per observation</li>
+        </ul>
+      </div>
+    </div>
+    <div class='columns'>
+      <div class='column is-one-third'>
+        Live link
+      </div>
+      <div class='column'>
+        <a href= 'https://klp.github.io/Interactive-Data-Vis-Spring2023/3_2_distributions/'>
+          3.1 Distributions
+        </a>
+      </div>
+    </div>
+    <div class='columns'>
+      <div class='column is-one-third'>
+        Data source
+      </div>
+      <div class='column'>
+        <a href= 'https://www.kaggle.com/datasets/debjeetdas/babies-birth-weight'>
+          Pregnancy data 1960-1967 in the San Francisco East Bay area
+        </a>
+      </div>
+    </div>
   </div>
   <script src="main.js"></script>
 </body>
