@@ -14,22 +14,29 @@
   <div class="content">
     <h1>Visualizing Utah's Population Growth</h1>
     <p>
-      I decided to update a tutorial focusing on distributions, which 
-      demonstrates use of scatterplots, state and menus that update the data 
-      displayed on the graph.
+      My end of semester project visualizes Utah's population growth as 
+      demonstrated by the 2020 US Census.
     </p>
     <div class='columns'>
       <div class='column is-one-third'>
         Brief
       </div>
       <div class='column'>
-      The scatterplot linked below shows the relationships between the age of the 
-      mother, the weight of the children born, and whether or not the mother 
-      smoked cigarettes. The dataset covers pregnancies between 1960 and 1967 
-      among women in the San Francisco East Bay area. 
-      I've used colors to differentiate between smokers and non-smokers, and a 
-      tooltip when hovering over each invidual circle to give details about the 
-      case/observation.
+      There are three graphs:
+        <ol>
+          <li>
+            A bar chart showing the fastest versus slowest growing states
+          </li>
+          <li>
+            A stacked bar chart breaking out migration from aboard and internal 
+            to the US for those states
+          </li>
+          <li>
+            A circle pack showing from which states people move to Utah. This 
+            graph can be color coded by either region or division (sub-region).
+          </li>
+
+        </ol>
       </div>
     </div>
     <div class='columns'>
@@ -38,24 +45,14 @@
       </div>
       <div class='column'>
         <ul>
-          <li>Scatterplot</li>
+          <li>Circle packs</li>
+          <li>Bar chart</li>
+          <li>Stacked bar chart </li>
+          <li>Color scheme</li>
+          <li>Tooltips</li>
+          <li>Animations</li>
           <li>Transitions</li>
-          <li>State management</li>
-          <li>Interactivity</li>
-        </ul>
-      </div>
-    </div>
-    <div class='columns'>
-      <div class='column is-one-third'>
-        Improvements after project
-      </div>
-      <div class='column'>
-        <ul>
-          <li>Fix the gap between x-axis and y-axis</li>
-          <li>Fixed ranges to avoid circles showing off the chart</li>
-          <li>Filtered out cases where the age was 'NA'</li>
-          <li>Added better highligting of a circle during hoverover</li>
-          <li>Added tooltip with case, weight, age per observation</li>
+          <li>Accessibility</li>
         </ul>
       </div>
     </div>
@@ -64,19 +61,38 @@
         Live link
       </div>
       <div class='column'>
-        <a href= 'https://klp.github.io/Interactive-Data-Vis-Spring2023/3_2_distributions/'>
-          3.1 Distributions
+        <a href= 'https://klp.github.io/Interactive-Data-Vis-Spring2023/project/data-viz.html'>
+          Visualizing Utah's Population Growth
         </a>
       </div>
     </div>
     <div class='columns'>
       <div class='column is-one-third'>
-        Data source
+        Data source(s)
       </div>
       <div class='column'>
-        <a href= 'https://www.kaggle.com/datasets/debjeetdas/babies-birth-weight'>
-          Pregnancy data 1960-1967 in the San Francisco East Bay area
-        </a>
+        <ul>
+          <li>
+            <a href='https://www.kaggle.com/datasets/finnegannguyen/statetostate-migration-flows-from-2010-to-2019'>
+            US Migration Flows in 10 years
+            </a>
+          </li>
+          <li>
+            <a href='https://www2.census.gov/programs-surveys/decennial/2020/data/apportionment/apportionment-2020-tableE.pdf'>
+              Table E. Numeric and Percent Change in Resident Population of the 
+              50 States, the District of Columbia, and Puerto Rico: 2020 Census 
+              and 2010 Census
+            </a> from the
+            <a href='https://www.census.gov/data/tables/2020/dec/2020-apportionment-data.html'>
+              2020 Census Apportionment Results
+            </a>
+          <li>
+            <a href='https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf'>
+              Census Regions and Divisions of the United States map / 
+              Census Bureau Regions and Divisions with State FIPS Codes 
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
